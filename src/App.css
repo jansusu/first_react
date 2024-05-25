@@ -1,0 +1,106 @@
+.cat {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.fixed ul li {
+  font-size: 25px;
+  padding-left: 20px;
+}
+.fixed img {
+  width: 120px;
+  height: 80px;
+}
+.fixed img:hover {
+  transform: scale(1.1);
+}
+.hm row {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.row h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+.menu .card:hover {
+  box-shadow: 15px 12px 10px white;
+}
+.row {
+  margin-bottom: 15px;
+}
+.foot img {
+  width: 70px;
+  margin-left: 20px;
+}
+.foot {
+  background-color: black;
+  color: white;
+  padding-top: 30px;
+  text-align: left;
+  line-height: 18px;
+  font-size: 15px;
+}
+.log {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  background-image: url(images/BGimg.jpg);
+}
+.log img {
+  height: 40px;
+  margin: 20px;
+}
+.log p {
+  font-weight: 700;
+  font-size: 40px;
+  font-family: "georgia";
+}
+.log label {
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "timesnew roman";
+  padding-right: 10px;
+}
+.menu ul li {
+  list-style: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding-bottom: 5px;
+  text-align: left;
+  margin-top: 10px;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.menu ul {
+  position: fixed;
+}
+.foot1 img {
+  width: 100px;
+}
+.menu img {
+  width: 100%;
+  height: 230px;
+  border-radius: 20px;
+}
+.menu .card {
+  height: 450px;
+  width: 320px;
+  border-radius: 20px;
+  text-align: center;
+}
+.menu .btn {
+  align-content: center;
+}
+.menu {
+  background-image: url(images/bac.jpeg);
+  color: white;
+}
+.menu .rc {
+  background-image: url(images/back.jpeg);
+}
