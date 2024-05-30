@@ -8,11 +8,23 @@ import Biryani from "../products/Biryani";
 import Box from "../products/Box";
 import Burgers from "../products/Burgers";
 import Snacks from "../products/Snacks";
-
-import { MdOutlineAddShoppingCart } from "react-icons/md";
 import Beverages from "../products/Beverages";
+import { MdOutlineAddShoppingCart } from "react-icons/md";
+
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, deleteFromCart } from "../store/cartslice/Cartslice";
 
 const Menu = () => {
+  const cartProduct = useSelector((state) => state.cart.cartItems);
+  const dispatch = useDispatch();
+
+  const addCart = (item) => {
+    dispatch(addToCart(item));
+  };
+
+  const deleteCart = (item) => {
+    dispatch(deleteFromCart(item));
+  };
   return (
     <>
       <section className="menu">
@@ -33,9 +45,7 @@ const Menu = () => {
                 <li>
                   <a href="#rolls">CHICKEN ROLLS</a>
                 </li>
-                <li>
-                  <a href="#rolls">CHICKEN ROLLS</a>
-                </li>
+
                 <li>
                   <a href="#buckets">CHICKEN BUCKETS</a>
                 </li>
@@ -56,6 +66,7 @@ const Menu = () => {
                 </li>
               </ul>
             </div>
+
             <div className="col-lg-9 rc">
               <div className="row">
                 <h2 id="peri">PERI PERI CHICKEN</h2>
@@ -67,10 +78,26 @@ const Menu = () => {
                         <h5 className="card-title">{item.title}</h5>
                         <p className="card-text">{item.price}</p>
                         <p className="card-text">{item.ds}</p>
-                        <a href="#" className="btn btn-danger">
-                          <MdOutlineAddShoppingCart />
-                          Add To Cart
-                        </a>
+                        {cartProduct.find((items) => items.id === item.id) ? (
+                          <button
+                            className="btn btn-primary"
+                            onClick={() => {
+                              deleteCart(item);
+                            }}
+                          >
+                            Remove From Cart
+                          </button>
+                        ) : (
+                          <button
+                            className="btn btn-danger"
+                            onClick={() => {
+                              addCart(item);
+                            }}
+                          >
+                            <MdOutlineAddShoppingCart />
+                            Add To Cart
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -87,10 +114,26 @@ const Menu = () => {
 
                         <p className="card-text">{item.price}</p>
                         <p className="card-text">{item.ds}</p>
-                        <a href="#" className="btn btn-danger">
-                          <MdOutlineAddShoppingCart />
-                          Add To Cart
-                        </a>
+                        {cartProduct.find((items) => items.id === item.id) ? (
+                          <button
+                            className="btn btn-primary"
+                            onClick={() => {
+                              deleteCart(item);
+                            }}
+                          >
+                            Remove From Cart
+                          </button>
+                        ) : (
+                          <button
+                            className="btn btn-danger"
+                            onClick={() => {
+                              addCart(item);
+                            }}
+                          >
+                            <MdOutlineAddShoppingCart />
+                            Add To Cart
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -106,10 +149,26 @@ const Menu = () => {
                         <h5 className="card-title">{item.title}</h5>
                         <p className="card-text">{item.price}</p>
                         <p className="card-text">{item.ds}</p>
-                        <a href="#" className="btn btn-danger">
-                          <MdOutlineAddShoppingCart />
-                          ADD TO Cart
-                        </a>
+                        {cartProduct.find((items) => items.id === item.id) ? (
+                          <button
+                            className="btn btn-primary"
+                            onClick={() => {
+                              deleteCart(item);
+                            }}
+                          >
+                            Remove From Cart
+                          </button>
+                        ) : (
+                          <button
+                            className="btn btn-danger"
+                            onClick={() => {
+                              addCart(item);
+                            }}
+                          >
+                            <MdOutlineAddShoppingCart />
+                            Add To Cart
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -125,10 +184,26 @@ const Menu = () => {
                         <h5 className="card-title">{item.title}</h5>
                         <p className="card-text">{item.price}</p>
                         <p className="card-text">{item.ds}</p>
-                        <a href="#" className="btn btn-danger">
-                          <MdOutlineAddShoppingCart />
-                          ADD TO Cart
-                        </a>
+                        {cartProduct.find((items) => items.id === item.id) ? (
+                          <button
+                            className="btn btn-primary"
+                            onClick={() => {
+                              deleteCart(item);
+                            }}
+                          >
+                            Remove From Cart
+                          </button>
+                        ) : (
+                          <button
+                            className="btn btn-danger"
+                            onClick={() => {
+                              addCart(item);
+                            }}
+                          >
+                            <MdOutlineAddShoppingCart />
+                            Add To Cart
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -144,10 +219,26 @@ const Menu = () => {
                         <h5 className="card-title">{item.title}</h5>
                         <p className="card-text">{item.price}</p>
                         <p className="card-text">{item.ds}</p>
-                        <a href="#" className="btn btn-danger">
-                          <MdOutlineAddShoppingCart />
-                          Add To Cart
-                        </a>
+                        {cartProduct.find((items) => items.id === item.id) ? (
+                          <button
+                            className="btn btn-primary"
+                            onClick={() => {
+                              deleteCart(item);
+                            }}
+                          >
+                            Remove From Cart
+                          </button>
+                        ) : (
+                          <button
+                            className="btn btn-danger"
+                            onClick={() => {
+                              addCart(item);
+                            }}
+                          >
+                            <MdOutlineAddShoppingCart />
+                            Add To Cart
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -163,10 +254,26 @@ const Menu = () => {
                         <h5 className="card-title">{item.title}</h5>
                         <p className="card-text">{item.price}</p>
                         <p className="card-text">{item.ds}</p>
-                        <a href="#" className="btn btn-danger">
-                          <MdOutlineAddShoppingCart />
-                          ADD TO Cart
-                        </a>
+                        {cartProduct.find((items) => items.id === item.id) ? (
+                          <button
+                            className="btn btn-primary"
+                            onClick={() => {
+                              deleteCart(item);
+                            }}
+                          >
+                            Remove From Cart
+                          </button>
+                        ) : (
+                          <button
+                            className="btn btn-danger"
+                            onClick={() => {
+                              addCart(item);
+                            }}
+                          >
+                            <MdOutlineAddShoppingCart />
+                            Add To Cart
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -182,10 +289,26 @@ const Menu = () => {
                         <h5 className="card-title">{item.title}</h5>
                         <p className="card-text">{item.price}</p>
                         <p className="card-text">{item.ds}</p>
-                        <a href="#" className="btn btn-danger">
-                          <MdOutlineAddShoppingCart />
-                          ADD TO Cart
-                        </a>
+                        {cartProduct.find((items) => items.id === item.id) ? (
+                          <button
+                            className="btn btn-primary"
+                            onClick={() => {
+                              deleteCart(item);
+                            }}
+                          >
+                            Remove From Cart
+                          </button>
+                        ) : (
+                          <button
+                            className="btn btn-danger"
+                            onClick={() => {
+                              addCart(item);
+                            }}
+                          >
+                            <MdOutlineAddShoppingCart />
+                            Add To Cart
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -201,10 +324,26 @@ const Menu = () => {
                         <h5 className="card-title">{item.title}</h5>
                         <p className="card-text">{item.price}</p>
                         <p className="card-text">{item.ds}</p>
-                        <a href="#" className="btn btn-danger">
-                          <MdOutlineAddShoppingCart />
-                          Add To Cart
-                        </a>
+                        {cartProduct.find((items) => items.id === item.id) ? (
+                          <button
+                            className="btn btn-primary"
+                            onClick={() => {
+                              deleteCart(item);
+                            }}
+                          >
+                            Remove From Cart
+                          </button>
+                        ) : (
+                          <button
+                            className="btn btn-danger"
+                            onClick={() => {
+                              addCart(item);
+                            }}
+                          >
+                            <MdOutlineAddShoppingCart />
+                            Add To Cart
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -220,10 +359,26 @@ const Menu = () => {
                         <h5 className="card-title">{item.title}</h5>
                         <p className="card-text">{item.price}</p>
                         <p className="card-text">{item.ds}</p>
-                        <a href="#" className="btn btn-danger">
-                          <MdOutlineAddShoppingCart />
-                          Add To Cart
-                        </a>
+                        {cartProduct.find((items) => items.id === item.id) ? (
+                          <button
+                            className="btn btn-primary"
+                            onClick={() => {
+                              deleteCart(item);
+                            }}
+                          >
+                            Remove From Cart
+                          </button>
+                        ) : (
+                          <button
+                            className="btn btn-danger"
+                            onClick={() => {
+                              addCart(item);
+                            }}
+                          >
+                            <MdOutlineAddShoppingCart />
+                            Add To Cart
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>
